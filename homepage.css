@@ -1,0 +1,287 @@
+body {
+    background-image: url('src/wooden-texture.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+}
+.navbar {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.nav-button {
+    width: 110px;
+    height: 30px;
+    border-radius: 25px;
+    border: none;
+    background: black;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    font-family: italiana;
+}
+.navbar i {
+   margin-left: 10px;
+}
+.nav-button:hover {
+    color: black;
+    background-color: white;
+    opacity: 90%;
+    cursor: pointer;
+}
+.bgimg {
+    margin-top: 40px;
+    margin-left: 70px;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.main {
+    width: 100%;
+    border-radius: 10px;
+    height: 500px;
+    margin-top: 70px;
+}
+.bgimg h1 {
+    background: linear-gradient(to right, rgb(247, 244, 103), #ec5c19);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    font-weight: bold;
+    font-size: 100px;
+}
+.pic {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-top: -10%;
+    position: relative;
+}
+.pic1 {
+    width: 400px;
+    height: 300px;
+    margin: 25px;
+    border-radius: 10px;
+}
+.pic1:hover {
+    cursor: pointer;
+    transition: ease-in 0.1s;
+    transform: scale(0.9);
+}
+
+/* Content section */
+.center {
+    font-family: bitter;
+}
+.center p {
+    text-align: center;
+    color: white;
+    margin-bottom: 0px;
+}
+.centerline {
+    display: flex;
+    column-gap: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.bigfont {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.btn {
+   width: 100%;
+   align-content: center;
+   color: white;
+   display: grid;
+}
+.btn1 {
+    place-self: center;
+    border: 3px solid;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: italiana;
+}
+.btn1:hover {
+    background-color: white;
+    color: black;
+}
+
+.pic2 {
+    display: flex;
+    justify-content: center;
+}
+.pic3 {
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    border-radius: 5%;
+}
+.pic3:hover {
+    cursor: pointer;
+    transition: ease-in 0.1s;
+    transform: scale(0.95);
+}
+
+.cset1 {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 25px;
+    position: relative;
+    font-family: inter;
+}
+.box {
+    display: flex;
+    text-align: center;
+}
+.box h1 {
+    position: absolute;
+    bottom: 255px;
+    left: 10px;
+    font-size: 50px;
+}
+.box h2 {
+    justify-content: center;
+    width: 100%;
+}
+.box h2 i {
+    color: gold;
+}
+.cset2 {
+    display: flex;
+    justify-content: center;
+}
+.card p {
+    font-size: 25px;
+    text-align: center;
+}
+.footer {
+    background-color: rgb(42, 33, 33);
+    color: white;
+    height: 30px;
+    position: relative;
+}
+.foot {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    column-gap: 20px;
+    font-family: italiana;
+}
+.foot li {
+    margin-top: 5px;
+    cursor: pointer;
+}
+.fa-facebook:hover {
+    color: blue;
+}
+.fa-square-instagram:hover {
+    background: linear-gradient(to right,#fffb00,#f01d9c);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-square-x-twitter:hover {
+    color: black;
+    background-color: white;
+}
+.fa-youtube:hover {
+    color: red;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .main {
+        height: auto;
+        margin-top: 80px; 
+    }
+    .bgimg h1 {
+        font-size: 60px;
+        text-align: center;
+        margin-top: 10px;
+        position: static;
+    }
+    .bgimg {
+        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    .pic, .pic2 {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .pic1, .pic3 {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+    }
+    .centerline {
+       flex-direction: column;
+       gap: 0;
+    }
+    .bigfont {
+        font-size: 20px;
+    }
+    .cset1, .cset2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        height: auto;
+        margin: 15px 0;
+    }
+    .card p {
+        font-size: 18px;
+    }
+    .footer {
+        height: auto;
+        padding: 10px 0;
+    }
+    .foot {
+        row-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-button {
+        width: 100px;
+        height: 30px;
+    }
+
+    .bgimg h1 {
+        font-size: 40px;
+    }
+
+    .bigfont {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}

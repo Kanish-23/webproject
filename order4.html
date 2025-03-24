@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Your Favourite Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('src/background.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .cart-items {
+            margin-top: 20px;
+        }
+        .cart-item {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body style="
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('src/coffeeproduct.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #3E2723;
+">
+
+    <div style="
+        text-align: center;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 10px;
+    ">
+        <h1 style="font-size: 2.5em; margin-bottom: 10px;">Bring Home the Aroma</h1>
+        <p style="font-size: 1.2em;">Order Your Favorite Coffee Products Now!
+        </p>
+    </div>
+
+    <form onsubmit="submitOrder(event)" style="
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    ">
+        <div style="margin-bottom: 15px;">
+            <label for="name" style="display: block; font-size: 1.1em;">Name</label>
+            <input type="text" id="name" name="name" required style="
+                width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="order" style="display: block; font-size: 1.1em;"> Our Products</label>
+            <select id="order" name="order" required style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+                <option value=""  disabled selected>Order your favourite</option>
+                <option value="D.R.Congo">Cafe Direct (D.R.Congo)</option>
+                <option value="Restore">Cafe Direct(Restore)</option>
+                <option value="Intense">Cafe Direct(Intense)</option>
+                <option value="Mayan Gold">Cafe Direct(Mayan Gold)</option>
+                <option value="Empower">Cafe Direct(Empower)</option>
+                <option value="Crema Elegant">Cafe Direct(Crema Elegant)</option>
+                <option value="Nest">Cafe Direct(Nest)</option>
+                <option value="Machu Picchu">Cafe Direct(Machu Picchu)</option>
+                <option value="Colombia Reserva">Cafe Direct(Colombia Reserva)</option>
+                <option value="Peru">Cafe Direct(Peru)</option>
+                <option value="Honduras">Cafe Direct(Honduras)</option>
+                <option value="Colombia">Cafe Direct(Colombia)</option>
+                <option value="ristretto">Cafe Direct(Ristretto)</option>
+                <option value="Kilimanjaro">Cafe Direct(Kilimanjaro)</option>
+                <option value="Lungo">Cafe Direct(Blend)</option>
+                <option value="Whiff Roast">Cafe Direct(Whiff Roast)</option>
+            </select>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="quantity" style="display: block; font-size: 1.1em;">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required style="
+               width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="paymentType" style="display: block; font-size: 1.1em;">Payment Type</label>
+            <select id="paymentType" name="paymentType" required style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="American Express">American Express</option>
+            </select>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="cardNumber" style="display: block; font-size: 1.1em;">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" required placeholder="Enter your card number" style="
+                width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="expiryDate" style="display: block; font-size: 1.1em;">Expiry Date</label>
+            <input type="month" id="expiryDate" name="expiryDate" required style="
+               width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="cvv" style="display: block; font-size: 1.1em;">CVV</label>
+            <input type="password" id="cvv" name="cvv" required placeholder="Enter CVV" style="
+                width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+        
+
+        <div style="text-align: center;">
+            <input type="submit" value="Place Order" onclick="window.location.href='orderpage3.html'"
+            style="
+                background-color: #6D4C41;
+                color: white;
+                padding: 10px 20px;
+                font-size: 1.2em;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            ">
+        </div>
+    </form>
+
+    <script>
+        function submitOrder(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const drink = document.getElementById('drink').value;
+            const size = document.getElementById('size').value;
+            const extras = document.getElementById('extras').value || 'None';
+            const quantity = document.getElementById('quantity').value;
+            const dineOrDelivery = document.getElementById('dineOrDelivery').value;
+
+
+            alert(`Order Summary:
+Name: ${name}
+Drink: ${drink}
+Size: ${size}
+Extras: ${extras}
+Quantity: ${quantity}
+Option: ${dineOrDelivery}`);
+        }
+
+        
+    
+    </script>
+
+</body>
+</html>

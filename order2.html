@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Coffee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('src/background.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .cart-items {
+            margin-top: 20px;
+        }
+        .cart-item {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body style="
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('src/coffeeshop.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #3E2723;
+">
+
+    <div style="
+        text-align: center;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 10px;
+    ">
+        <h1 style="font-size: 2.5em; margin-bottom: 10px;">Delight in Every Sip </h1>
+        <p style="font-size: 1.2em;">Order Your Perfect Cup of Coffee!</p>
+    </div>
+
+    <form onsubmit="submitOrder(event)" style="
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    ">
+        <div style="margin-bottom: 15px;">
+            <label for="name" style="display: block; font-size: 1.1em;">Name</label>
+            <input type="text" id="name" name="name" required style="
+                width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="dineOrDelivery" style="display: block; font-size: 1.1em;">Order Type</label>
+            <select id="dineOrDelivery" name="dineOrDelivery" required style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+                <option value="" disabled selected>Your preference</option>
+                <option value="Dine-In">Dine-In</option>
+                <option value="Delivery">Delivery</option>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="order" style="display: block; font-size: 1.1em;">Your Order</label>
+            <select id="order" name="order" required style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+                <option value=""  disabled selected>Your Order</option>
+                <option value="Caramel Coffee Fudge">Caramel Coffee Fudge</option>
+                <option value="Cortado">Cortado</option>
+                <option value="Doppio">Doppio</option>
+                <option value="Coffee Mocho">Coffee Mocho</option>
+                <option value="Cappucino">Cappucino</option>
+                <option value="Affogato">Affogato</option>
+                <option value="Irish Coffee">Irish Coffee</option>
+                <option value="Iced Coffee">Iced Coffee</option>
+                <option value="Espresso">Espreeso</option>
+                <option value="Amaricano">Amaricano</option>
+                <option value="Cold Brew">Cold Brew</option>
+                <option value="Latte">Latte</option>
+                <option value="ristretto">ristretto</option>
+                <option value="Bullet Proof">Bullet Proof</option>
+                <option value="Lungo">Lungo</option>
+                <option value="Flat White">Flat White</option>
+            </select>
+        </div>
+        
+    
+
+        <div style="margin-bottom: 15px;">
+            <label for="size" style="display: block; font-size: 1.1em;">Select Size</label>
+            <select id="size" name="size" required style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="extras" style="display: block; font-size: 1.1em;">Extras (Optional)</label>
+            <input type="text" id="extras" name="extras" placeholder="E.g., Extra sugar, Soy milk" style="
+                width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="quantity" style="display: block; font-size: 1.1em;">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required style="
+               width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="paymentType" style="display: block; font-size: 1.1em;">Payment Type</label>
+            <select id="paymentType" name="paymentType" required style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="American Express">American Express</option>
+            </select>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="cardNumber" style="display: block; font-size: 1.1em;">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" required placeholder="Enter your card number" style="
+                width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="expiryDate" style="display: block; font-size: 1.1em;">Expiry Date</label>
+            <input type="month" id="expiryDate" name="expiryDate" required style="
+               width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="cvv" style="display: block; font-size: 1.1em;">CVV</label>
+            <input type="password" id="cvv" name="cvv" required placeholder="Enter CVV" style="
+                width: 96%;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            ">
+        </div>
+        
+
+        <div style="text-align: center;">
+            <input type="submit" value="Place Order" onclick="window.location.href='orderpage3.html'"
+            style="
+                background-color: #6D4C41;
+                color: white;
+                padding: 10px 20px;
+                font-size: 1.2em;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            ">
+        </div>
+    </form>
+
+    <script>
+        function submitOrder(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const drink = document.getElementById('drink').value;
+            const size = document.getElementById('size').value;
+            const extras = document.getElementById('extras').value || 'None';
+            const quantity = document.getElementById('quantity').value;
+            const dineOrDelivery = document.getElementById('dineOrDelivery').value;
+
+
+            alert(`Order Summary:
+Name: ${name}
+Drink: ${drink}
+Size: ${size}
+Extras: ${extras}
+Quantity: ${quantity}
+Option: ${dineOrDelivery}`);
+        }
+
+        
+    
+    </script>
+
+</body>
+</html>

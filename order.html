@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Order Page</title>
+    
+    <link rel="stylesheet" href="orderstyle.css" />
+   
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@200;400;700;900&family=Crimson+Text:wght@400;600;700&family=Inter:wght@100;400;900&family=Italiana&family=Libre+Caslon+Text:wght@400;700&family=Playfair+Display:wght@400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet"
+    />
+</head>
+<body>
+   
+    <header>
+        <nav class="navbar">
+            <button class='nav-button active' data-page="homePage.html">Home<i class="fa-solid fa-house"></i></button>
+            <button class='nav-button' data-page='menu.html'>Menu<i class="fa-solid fa-martini-glass"></i></button>
+            <button class='nav-button' data-page='about_us.html'>About Us<i class="fa-solid fa-circle-info"></i></button>
+            <button class='nav-button' data-page='order.html'>Order<i class="fa-solid fa-truck"></i></button>
+            <button class='nav-button' data-page='contact_us.html'>Contact Us<i class="fa-solid fa-location-dot"></i></button>
+            <button class='nav-button' data-page='product.html'>Products<i class="fa-solid fa-box"></i></button>
+        </nav>
+    </header>
+
+   
+    <div class="main-wrapper"></div>
+
+    
+    <section class="featured-product">
+        <div class="card">
+            <div class="card-container">
+                <img src="src/caffe.jpg" alt="Caffe Mocha" />
+                <div class="text">
+                    <h3>Caffe Mocha</h3>
+                    <p>
+                        A Classic Italian coffee drink
+                        made with equal parts of
+                        espresso, steamed milk, and
+                        milk foam. It's rich, creamy,
+                        and perfect for any time of
+                        the day.
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="price-section">
+                <div class="price">$30.00</div>
+                <div class="discount">
+                    <span>10%</span>
+                    <span>Off</span>
+                </div>
+                <div class="offer">
+                    <p class="rating">
+                        <span>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span><br />
+                        (4.8/5 based on 250 reviews)
+                    </p>
+                    <p>
+                        Buy 1, Get 1 Free on Mondays!<br />
+                        Caffeine Content: 120 mg
+                    </p>
+                </div>
+                <button class="order-btn" onclick="window.location.href='order2.html'">
+                    <img src="src/coffee-icon.jpg" alt="Coffee Icon" class="button-icon" />
+                    Place your order
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="carousel-section">
+        <h2 class="carousel-title">Explore Our Selection</h2>
+        <div class="carousel-wrapper">
+            <div class="cards-container">
+                
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/Affagato.jpg" alt="Affagato" />
+                            <span class="price-badge">$5</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Affagato</h3>
+                            <p>
+                                A classic Italian coffee drink
+                                made with equal parts of
+                                espresso, steamed milk, and
+                                milk foam. Rich and creamy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/caffe.jpg" alt="Caffe Mocha" />
+                            <span class="price-badge">$8</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Caffe Mocha</h3>
+                            <p>
+                                A classic Italian coffee drink
+                                made with espresso, steamed
+                                milk, and chocolate. Perfect
+                                for any chocolate lover.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/latte.jpg" alt="Latte" />
+                            <span class="price-badge">$6</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Latte</h3>
+                            <p>
+                                A smooth blend of espresso
+                                and steamed milk, lightly
+                                topped with foam. Popular
+                                any time of the day!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/i1.jpg" alt="Cappuccino" />
+                            <span class="price-badge">$7</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Cappuccino</h3>
+                            <p>
+                                A classic blend of espresso,
+                                steamed milk, and thick foam.
+                                Perfect morning energizer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/men9.jpg" alt="Espresso" />
+                            <span class="price-badge">$4</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Espresso</h3>
+                            <p>
+                                Strong, bold, and pure
+                                coffee essence. The foundation
+                                of most coffee drinks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/men10.jpg" alt="Americano" />
+                            <span class="price-badge">$6</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Americano</h3>
+                            <p>
+                                A shot of espresso diluted
+                                with hot water. Simple,
+                                smooth, and aromatic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/men15.jpg" alt="Macchiato" />
+                            <span class="price-badge">$5</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Macchiato</h3>
+                            <p>
+                                Espresso with a small amount
+                                of milk foam on top. Strong
+                                and straightforward flavor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/men12.jpg" alt="Flat White" />
+                            <span class="price-badge">$7</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Flat White</h3>
+                            <p>
+                                Velvety microfoam layered
+                                over a double shot espresso.
+                                Creamy and balanced.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card-grid">
+                    <div class="card-container1">
+                        <div class="image-card">
+                            <img src="src/men7.jpg" alt="Irish Coffee" />
+                            <span class="price-badge">$9</span>
+                        </div>
+                        <div class="text1">
+                            <h3>Irish Coffee</h3>
+                            <p>
+                                A mix of hot coffee, Irish
+                                whiskey, and sugar, topped
+                                with thick cream.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button">
+            <button class="prev" id="prevBtn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="next" id="nextBtn">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    
+    <section class="page-container">
+        <div class="section section-left">
+            <div class="text-content">
+                <h1>We provide the<br />best food for you</h1>
+                <p>
+                    Lorem ipsum sit amet,
+                    consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="src/i13.jpg" class="card-container" alt="Food" />
+                <img src="src/dish-21.png" class="overlay-image" alt="Dish" />
+            </div>
+        </div>
+
+        <div class="section section-left">
+            <div class="image-content">
+                <img src="src/Group 13.png" alt="Group Image" />
+            </div>
+            <div class="text-content">
+                <h2>Welcome To Our <br /> Caffe</h2>
+                <p>
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do
+                    tempor incididunt ut labore et
+                    dolore magna aliqua
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="page">
+        <div class="container">
+            <p>
+                Get our Promo Code by
+                <br />
+                Subscribing to our Newsletter
+            </p>
+            <div class="text-container">
+                <textarea placeholder="Enter your email"></textarea>
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+        </div>
+
+       
+        <footer class="footer">
+            <div class="footer-top">
+                
+                <div class="foot">
+                    <div class="para">
+                        <p>
+                            <img src="src/logo 1.png" width="30" height="30" alt="Logo" />
+                            <b>Restaurant</b>
+                        </p>
+                    </div>
+                    <div class="text3">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore. <a href="homePage.html">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="foot">
+                    <h5>NAVIGATION</h5>
+                    <div class="text3">
+                        <p>
+                            <a href="menu.html">Menu</a><br />
+                            <a href="about_us.html">About us</a><br />
+                            <a href="contact_us.html">Contact us</a>
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="foot">
+                    <h5>DISHES</h5>
+                    <div class="text3">
+                        <p>
+                            Fish &amp; Veggies<br />
+                            Tofu Chili<br />
+                            Egg &amp; Cucumber<br />
+                            Lumpia W/Sauce
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="foot">
+                    <h5>FOLLOW US</h5>
+                    <div class="imgset">
+                        <img src="src/Facebook.png" alt="Facebook" />
+                        <img src="src/instagrame.png" alt="Instagram" />
+                        <img src="src/Group 66.png" alt="Twitter" />
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="hours">
+                <b><h5>OPENING HOURS</h5></b>
+                <div class="hours-item">
+                    <div class="day">Monday - Friday</div>
+                    <div class="time">8:00 am to 9:00 pm</div>
+                </div>
+                <div class="hours-item">
+                    <div class="day">Saturday</div>
+                    <div class="time">8:00 am to 9:00 pm</div>
+                </div>
+                <div class="hours-item">
+                    <div class="day">Sunday</div>
+                    <div class="time">CLOSED</div>
+                </div>
+            </div>
+
+            
+            <div class="footer-bottom">
+                <p>
+                    @2022 restaurants. All Right Reserved. Designed by
+                    <b>Isaac</b>
+                </p>
+                <p>
+                    <span>Term of Service</span> &nbsp; | &nbsp;
+                    <span>Privacy Policy</span>
+                </p>
+            </div>
+        </footer>
+    </section>
+
+    
+    <script src="navigation.js"></script>
+</body>
+</html>
